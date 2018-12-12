@@ -7,5 +7,5 @@
 export enum UserTypes {
   General = 'General',
   Crew = 'Crew',
-  Admin = 'Tree Service Admin'
+  TreeAdmin = 'Tree Service Admin'
 }
