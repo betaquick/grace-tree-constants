@@ -6,5 +6,6 @@
  */
 export enum StatusTypes {
   Ready = 'Ready',
-  Pause = 'Pause'
+  Pause = 'Pause',
+  Stop  = 'Stop'
 }
