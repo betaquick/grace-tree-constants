@@ -7,5 +7,8 @@
 export enum StatusTypes {
   Ready = 'Ready',
   Pause = 'Pause',
-  Stop  = 'Stop'
+  Stop  = 'Stop',
+  Delivered = 'Delivered', 
+  Canceled = 'Canceled',
+  Postponed = 'Postponed'
 }

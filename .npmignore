@@ -3,3 +3,4 @@
 .circleci/
 node_modules/
 coverage/
+lib/
