@@ -1,6 +1,6 @@
 {
   "name": "@betaquick/grace-tree-constants",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "a module to manage constants across grace tree projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,8 +10,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "mocha --reporter spec",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js - - -R spec"
+    "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts",
+    "cover": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts"
   },
   "keywords": [
     "constants",
@@ -19,18 +19,37 @@
     "beta-quick"
   ],
   "author": "Jimoh Damilola",
-  "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/lodash": "^4.14.119",
+    "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
+    "source-map-support": "^0.5.9",
+    "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   },
   "homepage": "https://bitbucket.org/betaquickdevelopers/grace-tree-constants#readme",
   "directories": {
     "lib": "lib",
     "test": "test"
-  }
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.js"
+    ],
+    "reporter": [
+      "html",
+      "text-summary"
+    ],
+    "all": true
+  },
+  "dependencies": {}
 }
