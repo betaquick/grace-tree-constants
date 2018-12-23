@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/bb/betaquickdevelopers/grace-tree-constants/tree/master.svg?style=svg&circle-token=f668ed272ad86a44be59914db425581366506238)](https://circleci.com/bb/betaquickdevelopers/grace-tree-constants/tree/master)
 [![NPM Version](https://img.shields.io/npm/v/bookshelf.svg?style=flat)](https://www.npmjs.com/package/@betaquick/grace-tree-constants)
 
-# fccc-constants
+# grace-tree-constants
 a module to manage constants across grace tree projects
 
 ## Installation 
