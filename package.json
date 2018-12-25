@@ -1,9 +1,9 @@
 {
   "name": "@betaquick/grace-tree-constants",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a module to manage constants across grace tree projects",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://bitbucket.org/betaquickdevelopers/grace-tree-constants.git"
