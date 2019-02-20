@@ -5,6 +5,7 @@
  * @enum {string}
  */
 export enum DeliveryStatusCodes {
+  Requested = 'RQTD',
   Scheduled = 'SCHD',
   Delivered = 'DLVD',
   Expired = 'EXPR'

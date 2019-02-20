@@ -5,3 +5,4 @@ export { RoleTypes } from './roleTypes';
 export { states } from './states';
 export { PhoneTypes } from './phoneTypes';
 export { DeliveryStatusCodes } from './deliveryStatusCodes';
+export { UserDeliveryStatus } from './userDeliveryStatus';
