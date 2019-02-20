@@ -1,5 +1,5 @@
 /**
- * Enum for types of de.
+ * Enum for status of user delivery.
  *
  * @readonly
  * @enum {string}
