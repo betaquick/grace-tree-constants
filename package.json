@@ -1,6 +1,6 @@
 {
   "name": "@betaquick/grace-tree-constants",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "a module to manage constants across grace tree projects",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts",
     "test-coverage": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts"
   },
