@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts",
     "test-coverage": "nyc mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts"
   },
