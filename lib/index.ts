@@ -6,4 +6,5 @@ export { states } from './states';
 export { PhoneTypes } from './phoneTypes';
 export { DeliveryStatusCodes } from './deliveryStatusCodes';
 export { UserDeliveryStatus } from './userDeliveryStatus';
-export { Placeholders } from './placeholders';
+export { Placeholders, AvailablePlaceholders } from './placeholders';
+export { NotificationTypes } from './notificationTypes';
