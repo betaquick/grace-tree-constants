@@ -5,16 +5,92 @@
  * @enum {string}
  */
 
+ import { NotificationTypes } from './notificationTypes';
+
+
  export enum Placeholders {
    RecipientFirstName = '{{RECIPIENTFIRSTNAME}}',
    RecipientLastName = '{{RECIPIENTLASTNAME}}',
    RecipientPhoneNumber = '{{RECIPIENTPHONENUMBER}}',
    RecipientAddress = '{{RECIPIENTADDRESS}}',
+   RecipientEmail = '{{RECIPIENTEMAIL}}',
+   NewCrewEmail = '{{NEWCREWEMAIL}}',
+   NewCrewPassword = '{{NEWCREWPASSWORD}}',
    CompanyName = '{{COMPANYNAME}}',
    CompanyAddress = '{{COMPANYADDRESS}}',
    AdditionalRecipientText = '{{ADDITIONALRECIPIENTTEXT}}',
    AdditionalCompanyText = '{{ADDITIONALCOMPANYTEXT}}',
    AssignedUserFirstName = '{{ASSIGNEDUSERFIRSTNAME}}',
    AssignedUserLastName = '{{ASSIGNEDUSERLASTNAME}}',
-   AssignedUserPhoneNumber = '{{ASSIGNEDUSERPHONENUMBER}}'
+   AssignedUserPhoneNumber = '{{ASSIGNEDUSERPHONENUMBER}}',
+   DeliveryRequestUrl = '{{DELIVERYREQUESTURL}}',
+   SiteUrl = '{{SITEURL}}',
+   SiteLoginUrl = '{{SITELOGINPAGE}}'
  }
+
+ const RecipientDetails = [
+   Placeholders.RecipientAddress, Placeholders.RecipientEmail,
+   Placeholders.RecipientLastName, Placeholders.RecipientFirstName,
+   Placeholders.RecipientPhoneNumber
+  ];
+
+  const AssignedUserDetails = [
+    Placeholders.AssignedUserFirstName, Placeholders.AssignedUserLastName,
+    Placeholders.AssignedUserPhoneNumber
+  ];
+  
+
+export const AvailablePlaceholders = {
+  [NotificationTypes.CrewRegistrationEmail]: [
+    Placeholders.SiteLoginUrl, Placeholders.SiteUrl,
+    Placeholders.NewCrewEmail, Placeholders.NewCrewPassword,
+    Placeholders.CompanyName, Placeholders.RecipientFirstName,
+    Placeholders.RecipientLastName
+  ],
+  [NotificationTypes.UserRegistrationAdminEmail]: [
+    ...RecipientDetails
+  ],
+  [NotificationTypes.UserStatusEmail]: [
+    ...RecipientDetails
+  ],
+  [NotificationTypes.UserDeliveryEmail]: [
+    ...RecipientDetails, Placeholders.CompanyAddress, Placeholders.CompanyName,
+    ...AssignedUserDetails, Placeholders.AdditionalRecipientText,
+    Placeholders.AdditionalCompanyText
+  ],
+  [NotificationTypes.CompanyDeliveryEmail]: [
+    ...AssignedUserDetails, ...RecipientDetails,
+    Placeholders.AdditionalCompanyText, Placeholders.AdditionalRecipientText,
+    Placeholders.CompanyAddress, Placeholders.CompanyName
+  ],
+  [NotificationTypes.CompanyDeliveryRequestEmail]: [
+    Placeholders.DeliveryRequestUrl, Placeholders.CompanyAddress,
+    Placeholders.CompanyName
+  ],
+  [NotificationTypes.DeliveryRequestSMS]: [
+    Placeholders.DeliveryRequestUrl, Placeholders.CompanyAddress,
+    Placeholders.CompanyName
+  ],
+  [NotificationTypes.DeliveryRequestAcceptanceEmail]: [
+    ...AssignedUserDetails, ...RecipientDetails, Placeholders.CompanyName
+  ],
+  [NotificationTypes.DeliveryWarningEmail]: [
+    ...RecipientDetails, Placeholders.CompanyAddress,
+    Placeholders.CompanyName
+  ],
+  [NotificationTypes.CompanyDeliverySMS]: [
+    ...AssignedUserDetails, ...RecipientDetails
+  ],
+  [NotificationTypes.UserDeliverySMS]: [
+    Placeholders.AssignedUserPhoneNumber
+  ],
+  [NotificationTypes.DeliveryWarningEmail]: [
+    Placeholders.RecipientFirstName, Placeholders.CompanyName,
+    Placeholders.RecipientLastName
+  ],
+  [NotificationTypes.DeliveryWarningSMS]: [
+    Placeholders.RecipientFirstName, Placeholders.CompanyName,
+    Placeholders.RecipientLastName
+  ]
+ };
+
