@@ -65,7 +65,7 @@ export const AvailablePlaceholders = {
   ],
   [NotificationTypes.CompanyDeliveryRequestEmail]: [
     Placeholders.DeliveryRequestUrl, Placeholders.CompanyAddress,
-    Placeholders.CompanyName
+    Placeholders.CompanyName, Placeholders.RecipientFirstName
   ],
   [NotificationTypes.DeliveryRequestSMS]: [
     Placeholders.DeliveryRequestUrl, Placeholders.CompanyAddress,
@@ -73,6 +73,9 @@ export const AvailablePlaceholders = {
   ],
   [NotificationTypes.DeliveryRequestAcceptanceEmail]: [
     ...AssignedUserDetails, ...RecipientDetails, Placeholders.CompanyName
+  ],
+  [NotificationTypes.DeliveryRequestAcceptanceSMS]: [
+    Placeholders.RecipientFirstName, Placeholders.RecipientLastName
   ],
   [NotificationTypes.DeliveryWarningEmail]: [
     ...RecipientDetails, Placeholders.CompanyAddress,
@@ -82,7 +85,7 @@ export const AvailablePlaceholders = {
     ...AssignedUserDetails, ...RecipientDetails
   ],
   [NotificationTypes.UserDeliverySMS]: [
-    Placeholders.AssignedUserPhoneNumber
+    Placeholders.AssignedUserPhoneNumber, Placeholders.CompanyName
   ],
   [NotificationTypes.DeliveryWarningEmail]: [
     Placeholders.RecipientFirstName, Placeholders.CompanyName,
