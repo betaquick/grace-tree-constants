@@ -190,7 +190,7 @@ const states: Array<IState> = [
     "abbr": "VA"
   },
   {
-    "name": "Washington State",
+    "name": "Washington",
     "abbr": "WA"
   },
   {
