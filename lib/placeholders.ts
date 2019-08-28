@@ -16,6 +16,7 @@
    RecipientEmail = '{{RECIPIENTEMAIL}}',
    NewCrewEmail = '{{NEWCREWEMAIL}}',
    NewCrewPassword = '{{NEWCREWPASSWORD}}',
+   NewCrewPhoneNumber = '{{NEWCREWPHONENUMBER}}',
    CompanyName = '{{COMPANYNAME}}',
    CompanyAddress = '{{COMPANYADDRESS}}',
    AdditionalRecipientText = '{{ADDITIONALRECIPIENTTEXT}}',
@@ -45,7 +46,7 @@ export const AvailablePlaceholders = {
     Placeholders.SiteLoginUrl, Placeholders.SiteUrl,
     Placeholders.NewCrewEmail, Placeholders.NewCrewPassword,
     Placeholders.CompanyName, Placeholders.RecipientFirstName,
-    Placeholders.RecipientLastName
+    Placeholders.RecipientLastName, Placeholders.NewCrewPhoneNumber
   ],
   [NotificationTypes.UserRegistrationAdminEmail]: [
     ...RecipientDetails
