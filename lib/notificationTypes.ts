@@ -7,7 +7,9 @@
 
 export enum NotificationTypes {
   CrewRegistrationEmail = 'CREW REGISTRATION EMAIL',
+  CrewRegistrationSMS = 'CREW REGISTRATION SMS',
   UserRegistrationAdminEmail = 'NOTIFY ADMIN OF USER REGISTRATION EMAIL',
+  UserRegistrationAdminSMS = 'NOTIFY ADMIN OF USER REGISTRATION SMS',
   UserStatusEmail = 'USER STATUS UPDATE EMAIL',
   UserDeliveryEmail = 'USER DELIVERY NOTIFICATION EMAIL',
   CompanyDeliveryEmail = 'COMPANY DELIVERY NOTIFICATION EMAIL',
