@@ -48,11 +48,20 @@ export const AvailablePlaceholders = {
     Placeholders.CompanyName, Placeholders.RecipientFirstName,
     Placeholders.RecipientLastName, Placeholders.NewCrewPhoneNumber
   ],
+  [NotificationTypes.CrewRegistrationSMS]: [
+    Placeholders.SiteLoginUrl, Placeholders.SiteUrl,
+    Placeholders.NewCrewEmail, Placeholders.NewCrewPassword,
+    Placeholders.CompanyName, Placeholders.RecipientFirstName,
+    Placeholders.RecipientLastName, Placeholders.NewCrewPhoneNumber
+  ],
   [NotificationTypes.UserRegistrationAdminEmail]: [
     ...RecipientDetails
   ],
   [NotificationTypes.UserStatusEmail]: [
-    ...RecipientDetails
+    Placeholders.RecipientLastName, Placeholders.RecipientFirstName,
+  ],
+  [NotificationTypes.UserStatusSMS]: [
+    Placeholders.RecipientLastName, Placeholders.RecipientFirstName,
   ],
   [NotificationTypes.UserDeliveryEmail]: [
     ...RecipientDetails, Placeholders.CompanyAddress, Placeholders.CompanyName,
