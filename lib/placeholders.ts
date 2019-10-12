@@ -25,6 +25,7 @@
    AssignedUserLastName = '{{ASSIGNEDUSERLASTNAME}}',
    AssignedUserPhoneNumber = '{{ASSIGNEDUSERPHONENUMBER}}',
    DeliveryRequestUrl = '{{DELIVERYREQUESTURL}}',
+   DeliveryProducts = '{{DELIVERYPRODUCTS}}',
    SiteUrl = '{{SITEURL}}',
    SiteLoginUrl = '{{SITELOGINPAGE}}'
  }
@@ -71,7 +72,8 @@ export const AvailablePlaceholders = {
   [NotificationTypes.CompanyDeliveryEmail]: [
     ...AssignedUserDetails, ...RecipientDetails,
     Placeholders.AdditionalCompanyText, Placeholders.AdditionalRecipientText,
-    Placeholders.CompanyAddress, Placeholders.CompanyName
+    Placeholders.CompanyAddress, Placeholders.CompanyName,
+    Placeholders.DeliveryProducts
   ],
   [NotificationTypes.CompanyDeliveryRequestEmail]: [
     Placeholders.DeliveryRequestUrl, Placeholders.CompanyAddress,
@@ -92,7 +94,8 @@ export const AvailablePlaceholders = {
     Placeholders.CompanyName
   ],
   [NotificationTypes.CompanyDeliverySMS]: [
-    ...AssignedUserDetails, ...RecipientDetails
+    ...AssignedUserDetails, ...RecipientDetails,
+    Placeholders.DeliveryProducts
   ],
   [NotificationTypes.UserDeliverySMS]: [
     Placeholders.AssignedUserPhoneNumber, Placeholders.CompanyName
