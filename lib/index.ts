@@ -8,3 +8,4 @@ export { DeliveryStatusCodes } from './deliveryStatusCodes';
 export { UserDeliveryStatus } from './userDeliveryStatus';
 export { Placeholders, AvailablePlaceholders } from './placeholders';
 export { NotificationTypes } from './notificationTypes';
+export { ToCs as SignUpTerms } from './toc';
